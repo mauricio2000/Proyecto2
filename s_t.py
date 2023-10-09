@@ -6,9 +6,6 @@ from streamlit_bokeh_events import streamlit_bokeh_events
 from PIL import Image
 import time
 import glob
-import cv2
-import numpy as np
-import pytesseract
 
 
 
@@ -16,8 +13,9 @@ from gtts import gTTS
 from googletrans import Translator
 
 
-st.title("Interfaces Multimodales PROYECTO 2")
-st.subheader("Bienvenidos a mi traductor de imagenes y audios")
+st.title("Interfaces Multimodales")
+st.subheader("Bienvenidos a mi traducotr")
+st.subheader("El profe paso todo el codigo pero bueno")
 
 
 image = Image.open('multimedmeme.jpg')
@@ -184,8 +182,3 @@ if result:
                     print("Deleted ", f)
 
     remove_files(7)
-
-
-    img_rgb = cv2.cvtColor(cv2_img, cv2.COLOR_BGR2RGB)
-    text=pytesseract.image_to_string(img_rgb)
-    st.write(text) 
